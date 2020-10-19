@@ -5,6 +5,9 @@ const PORT = process.env.PORT || 5000
 
 const app = express();
 
+app.locals.APP_TARGET = process.env.APP_TARGET || 'edge';
+app.locals.APP_TARGET_NAME = process.env.APP_TARGET_TITLE || `kit-${app.locals.APP_TARGET}`;
+
 if (process.env.ENFORCE_TLS) {
     app.use(enforce.HTTPS({ trustProtoHeader: true }))
 }
