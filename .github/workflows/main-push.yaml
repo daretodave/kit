@@ -16,6 +16,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           WITH_V: true
           INITIAL_VERSION: 0.0.0
+          RELEASE_BRANCHES: main
   update_release_draft:
     runs-on: ubuntu-latest
     steps:
